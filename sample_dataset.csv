@@ -1,0 +1,241 @@
+"code","language"
+"def hello_world():
+    print('Hello, World!')
+hello_world()","Python"
+"import numpy as np
+arr = np.array([1, 2, 3])
+print(arr.mean())","Python"
+"class Animal:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        return f'{self.name} speaks'","Python"
+"for i in range(10):
+    if i % 2 == 0:
+        print(f'Even: {i}')","Python"
+"import pandas as pd
+df = pd.read_csv('data.csv')
+print(df.describe())","Python"
+"def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)","Python"
+"with open('file.txt', 'r') as f:
+    content = f.read()
+    print(content)","Python"
+"x = [i**2 for i in range(20) if i % 3 == 0]
+print(x)","Python"
+"try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print('Error:', e)","Python"
+"from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def index():
+    return 'Hello'","Python"
+"public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(""Hello, World!"");
+    }
+}","Java"
+"import java.util.ArrayList;
+ArrayList<String> list = new ArrayList<>();
+list.add(""item"");
+System.out.println(list.size());","Java"
+"public class Animal {
+    private String name;
+    public Animal(String name) { this.name = name; }
+    public String getName() { return name; }
+}","Java"
+"for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+        System.out.println(""Even: "" + i);
+    }
+}","Java"
+"interface Shape {
+    double area();
+    double perimeter();
+}","Java"
+"try {
+    int[] arr = new int[5];
+    arr[10] = 1;
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println(e.getMessage());
+}","Java"
+"import java.util.HashMap;
+HashMap<String, Integer> map = new HashMap<>();
+map.put(""key"", 42);
+System.out.println(map.get(""key""));","Java"
+"public static int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}","Java"
+"Scanner scanner = new Scanner(System.in);
+System.out.print(""Enter name: "");
+String name = scanner.nextLine();
+System.out.println(""Hello, "" + name);","Java"
+"@Override
+public String toString() {
+    return ""MyClass{name='"" + name + ""'}"";
+}","Java"
+"#include <iostream>
+using namespace std;
+int main() {
+    cout << ""Hello, World!"" << endl;
+    return 0;
+}","C++"
+"#include <vector>
+#include <algorithm>
+vector<int> v = {5, 3, 1, 4, 2};
+sort(v.begin(), v.end());","C++"
+"class Animal {
+public:
+    string name;
+    Animal(string n) : name(n) {}
+    virtual void speak() { cout << name << "" speaks""; }
+};","C++"
+"for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0)
+        cout << ""Even: "" << i << endl;
+}","C++"
+"#include <map>
+map<string, int> scores;
+scores[""Alice""] = 95;
+cout << scores[""Alice""];","C++"
+"int* ptr = new int(42);
+cout << *ptr << endl;
+delete ptr;
+ptr = nullptr;","C++"
+"template<typename T>
+T add(T a, T b) {
+    return a + b;
+}
+cout << add(3, 4);","C++"
+"try {
+    throw runtime_error(""Something went wrong"");
+} catch (const exception& e) {
+    cerr << ""Caught: "" << e.what();
+}","C++"
+"struct Point {
+    float x, y;
+    float distance() { return sqrt(x*x + y*y); }
+};","C++"
+"#include <fstream>
+ofstream file(""output.txt"");
+file << ""Hello File"" << endl;
+file.close();","C++"
+"function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet('World'));","JavaScript"
+"const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled);","JavaScript"
+"class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    speak() {
+        return `${this.name} makes a sound.`;
+    }
+}","JavaScript"
+"fetch('https://api.example.com/data')
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));","JavaScript"
+"const obj = { name: 'Alice', age: 25 };
+const { name, age } = obj;
+console.log(name, age);","JavaScript"
+"async function getData() {
+    try {
+        const res = await fetch('/api');
+        const data = await res.json();
+        return data;
+    } catch (e) {
+        console.error(e);
+    }
+}","JavaScript"
+"document.getElementById('btn').addEventListener('click', () => {
+    document.querySelector('.box').style.display = 'none';
+});","JavaScript"
+"const arr = [3, 1, 4, 1, 5, 9];
+arr.sort((a, b) => a - b);
+console.log(arr);","JavaScript"
+"const promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Done!'), 1000);
+});
+promise.then(msg => console.log(msg));","JavaScript"
+"const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+console.log(add(2,3), multiply(4,5));","JavaScript"
+"SELECT * FROM users WHERE age > 18 ORDER BY name ASC;","SQL"
+"CREATE TABLE employees (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    salary DECIMAL(10,2)
+);","SQL"
+"INSERT INTO products (name, price) VALUES ('Laptop', 999.99);
+UPDATE products SET price = 899.99 WHERE name = 'Laptop';","SQL"
+"SELECT dept, COUNT(*) as total, AVG(salary) as avg_salary
+FROM employees
+GROUP BY dept
+HAVING avg_salary > 50000;","SQL"
+"SELECT e.name, d.department_name
+FROM employees e
+INNER JOIN departments d ON e.dept_id = d.id
+WHERE d.location = 'New York';","SQL"
+"DELETE FROM orders WHERE status = 'cancelled' AND created_at < '2023-01-01';","SQL"
+"CREATE INDEX idx_email ON users(email);
+SELECT * FROM users WHERE email = 'test@example.com';","SQL"
+"ALTER TABLE users ADD COLUMN phone VARCHAR(20);
+ALTER TABLE users DROP COLUMN address;","SQL"
+"SELECT name, salary,
+    RANK() OVER (PARTITION BY dept ORDER BY salary DESC) as rank
+FROM employees;","SQL"
+"BEGIN TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+COMMIT;","SQL"
+"#!/bin/bash
+echo 'Hello, World!'
+for i in {1..5}; do
+    echo ""Number: $i""
+done","Bash"
+"#!/bin/bash
+if [ -f ""$1"" ]; then
+    echo ""File exists""
+    wc -l ""$1""
+else
+    echo ""File not found""
+fi","Bash"
+"#!/bin/bash
+BACKUP_DIR=/backup/$(date +%Y%m%d)
+mkdir -p $BACKUP_DIR
+cp -r /home/user/* $BACKUP_DIR
+echo ""Backup done""","Bash"
+"while read line; do
+    echo ""Processing: $line""
+done < input.txt","Bash"
+"grep -r 'error' /var/log/*.log | awk '{print $1}' | sort | uniq -c","Bash"
+"function greet() {
+    local name=$1
+    echo ""Hello, $name!""
+}
+greet ""World""","Bash"
+"chmod +x script.sh
+./script.sh
+ps aux | grep python | awk '{print $2}'","Bash"
+"for file in *.py; do
+    echo ""Linting $file""
+    pylint $file
+done","Bash"
+"curl -X POST https://api.example.com/data \
+    -H 'Content-Type: application/json' \
+    -d '{""key"": ""value""}'","Bash"
+"#!/bin/bash
+COUNT=0
+while [ $COUNT -lt 10 ]; do
+    echo $COUNT
+    COUNT=$((COUNT + 1))
+done","Bash"
